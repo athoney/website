@@ -1,6 +1,6 @@
 ---
 title: "Golf"
-description: "An online (mobile friendly) version of my favorite card game... especially useful when even the smallest playing cards are too big."
+description: "An online (mobile friendly) version of my favorite card game... especially useful when even the smallest playing cards are too big. Written in React, styled with Bootstrap."
 pubDate: "Fall 2023"
 heroImage: "/golf.png"
 badge: "Web Dev"
