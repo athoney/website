@@ -1,0 +1,102 @@
+---
+const { sideBarActiveItemID } = Astro.props;
+const activeClass = "bg-base-300"; // For primary color replace with `active` class
+---
+
+<ul class="menu grow shrink menu-md overflow-y-auto">
+    <li><a class="py-3 text-base" id="home" href="#about">About</a></li>
+    <li>
+        <a class="py-3 text-base" id="projects" href="/projects">Projects</a>
+    </li>
+    <li><a class="py-3 text-base" id="cv" href="#resume">Resume</a></li>
+    <li>
+        <details open>
+            <summary class="py-3 text-base">More Themes</summary>
+            <ul>
+                <li class="text-base">
+                    <input
+                        type="radio"
+                        name="theme-dropdown"
+                        class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                        aria-label="light"
+                        value="light"
+                    />
+                </li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="valentine"
+                    value="valentine"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="cyberpunk"
+                    value="cyberpunk"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="aqua"
+                    value="aqua"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="lemonade"
+                    value="lemonade"
+                /></li>
+                <div class="divider my-1"></div>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="dark"
+                    value="dark"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="sunset"
+                    value="sunset"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="coffee"
+                    value="coffee"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="synthwave"
+                    value="synthwave"
+                /></li>
+                <li class="text-base"><input
+                    type="radio"
+                    name="theme-dropdown"
+                    class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                    aria-label="dim"
+                    value="dim"
+                /></li>
+            </ul>
+        </details>
+    </li>
+</ul>
+
+<script
+    define:vars={{
+        sideBarActiveItemID: sideBarActiveItemID,
+        activeClass: activeClass,
+    }}
+>
+    const activeItemElem = document.getElementById(sideBarActiveItemID);
+    activeItemElem && activeItemElem.classList.add(activeClass);
+</script>
