@@ -18,7 +18,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dracula">
   <head>
     <BaseHead
       title={title}
@@ -28,23 +28,7 @@ const {
       ogType={ogType}
     />
     {TRANSITION_API && <ViewTransitions />}
-    <script is:inline>
-      // ☝️ This script prevent the FART effect.
-      if (localStorage.getItem("theme") === null) {
-        document.documentElement.setAttribute("data-theme", "light");
-      } else
-      console.log("checked")
-        document.documentElement.setAttribute(
-          "data-theme",
-          localStorage.getItem("theme"),
-        );
-      // "theme" LocalStorage value is set by the package to remember user preference.
-      // The value is checked and applyed before rendering anything.
-    </script>
-    <script>
-      import { themeChange } from "theme-change";
-      themeChange();
-    </script>
+    
   </head>
   <body>
     <div class="bg-base-100 drawer lg:drawer-open">
