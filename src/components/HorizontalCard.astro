@@ -49,11 +49,17 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
             tags.map((tag) => <div class="badge badge-accent me-2">{tag}</div>)
         }
 
-        <a
-          class="hover:text-secondary text-primary underline text-right grow justify-self-end"
-          href={url}
-          target="_blank">{link_text}</a
-        >
+        {
+          url && (
+            <a
+              class="hover:text-secondary text-primary underline text-right grow justify-self-end"
+              href={url}
+              target="_blank"
+            >
+              {link_text}
+            </a>
+          )
+        }
       </div>
     </div>
   </div>
