@@ -6,5 +6,6 @@ heroImage: "/csta.jpg"
 url: "https://wyoming.csteachers.org/"
 badge: "Research"
 years: ["2023"]
+link_text: "CSTA"
 ---
 

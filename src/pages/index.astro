@@ -44,11 +44,11 @@ const research = await getCollection("research");
 
   <!-- Educational Outreach -->
   <div id="education-outreach" class="mb-10">
-    <div class="flex flex-row">
-      <div class="text-3xl font-bold mb-2">Educational Outreach</div>
+    <div class="flex sm:flex-row flex-col">
+      <div class="text-3xl font-bold mb-2 w-full sm:w-auto">Educational Outreach</div>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="ms-2 mt-2"
+        class="sm:ms-2 sm:mt-2 mx-auto"
         viewBox="0 0 24 24"
         fill="currentColor"
         width="24"
@@ -65,8 +65,8 @@ const research = await getCollection("research");
         ></path>
       </svg>
     </div>
-    <text
-      >Empowering the next generation of technologists with engaging curriculum</text
+    <div class="mx-auto text-center sm:text-left"
+      >Empowering the next generation of technologists with engaging curriculum</div
     >
     {
       education_outreach.map((project, i) => (
@@ -78,6 +78,7 @@ const research = await getCollection("research");
             url={project.data.url}
             years={project.data.years}
             loading={i < 2 ? "eager" : undefined}
+            link_text={project.data.link_text}
           />
           <div class="divider my-0" />
         </>
@@ -102,7 +103,7 @@ const research = await getCollection("research");
           clip-rule="evenodd"></path>
       </svg>
     </div>
-    <text>A mix of client projects and passion-driven creations</text>
+    <text class="">A mix of client projects and passion-driven creations</text>
 
     {
       software_devs.map((project, i) => (
@@ -114,6 +115,7 @@ const research = await getCollection("research");
             tags={project.data.tags}
             url={project.data.url}
             loading={"lazy"}
+            link_text={project.data.link_text}
           />
           <div class="divider my-0" />
         </>
@@ -145,10 +147,10 @@ const research = await getCollection("research");
         ></path>
       </svg>
     </div>
-    <text>
+    <div class="text-justify">
       Advancing innovation through curiosity-driven exploration and applied
       solutions
-    </text>
+    </div>
     {
       research.map((project, i) => (
         <>
@@ -159,6 +161,8 @@ const research = await getCollection("research");
             url={project.data.url}
             years={project.data.years}
             loading={"lazy"}
+            link_text={project.data.link_text}
+
           />
           <div class="divider my-0" />
         </>

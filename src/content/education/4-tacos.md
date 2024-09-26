@@ -6,5 +6,6 @@ heroImage: "/tacos.png"
 url: "https://www.youtube.com/@TACoS307"
 badge: "Research"
 years: ["2021", "2022", "2023"]
+link_text: "TACoS Youtube"
 ---
 

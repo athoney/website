@@ -6,4 +6,5 @@ heroImage: "/golf.png"
 badge: "Web Dev"
 url: "https://golf-phi.vercel.app/"
 tags: ["React","Bootstrap"]
+link_text: "Play Golf"
 ---

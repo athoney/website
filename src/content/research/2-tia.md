@@ -7,5 +7,7 @@ CTI leveraging the Structured Threat Information Expression (STIX) language. Fun
 heroImage: "/tia.png"
 url: "/tia.pdf"
 tags: ["Go", "PostgreSQL", "Javascript", "Bootstrap", "STIX"]
+link_text: "View Poster"
+
 ---
 

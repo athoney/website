@@ -6,4 +6,5 @@ heroImage: "/nwccd.webp"
 url: "https://www.thesheridanpress.com/news/local/the-art-of-computer-science-sheridan-college-offers-youth-computer-programming-camp/article_17bacccc-2f0b-11ef-92e6-ffbd60036adb.html"
 badge: "Research"
 years: ["2023", "2024"]
+link_text: "Sheridan Press Article"
 ---

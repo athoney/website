@@ -6,5 +6,6 @@ heroImage: "/wyolution.png"
 url: "https://sheridanclt.org/water/"
 badge: "Research"
 tags: ["LAMP","NodeJS", "Puppeteer"]
+link_text: "Drought Outlook Report"
 ---
 

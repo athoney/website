@@ -1,5 +1,15 @@
 ---
-const { title, img, desc, url = "", badge, tags, years, target = "_blank", loading=null } = Astro.props;
+const {
+  title,
+  img,
+  desc,
+  url = "",
+  badge,
+  tags,
+  years,
+  loading = null,
+  link_text,
+} = Astro.props;
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
@@ -7,43 +17,44 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 <div
   class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
 >
-  <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
-      {
-        img && (
-          <Image
-            src={img}
-            width={750}
-            height={422}
-            format="webp"
-            alt={title}
-            class="max-w-full md:max-w-[13rem] rounded-lg"
-            loading={loading}
-          />
-        )
-      }
-      <div class="grow w-full">
-        <h1 class="text-xl font-bold">
-          {title}
-          {badge && <div class="badge badge-accent mx-2">{badge}</div>}
-          {
-            years &&
-              years.map((year) => (
-                <div class="badge badge-secondary mx-2">{year}</div>
-              ))
-          }
-          {
-            tags &&
-              tags.map((tag) => (
-                <div class="badge badge-accent mx-2">{tag}</div>
-              ))
-          }
-        </h1>
-        <p class="py-1 text-1xl">{desc}</p>
-        <div class="card-actions justify-end">
+  <div class="hero-content flex-col md:flex-row">
+    {
+      img && (
+        <Image
+          src={img}
+          width={750}
+          height={422}
+          format="webp"
+          alt={title}
+          class="max-w-full md:max-w-[13rem] rounded-lg"
+          loading={loading}
+        />
+      )
+    }
+    <div class="grow w-full">
+      <h1 class="text-xl font-bold">
+        {title}
+      </h1>
+      <p class="py-1 text-1xl">{desc}</p>
+      <div class="flex flex-row gap-3">
+        {badge && <div class="badge badge-accent">{badge}</div>}
+        {
+          years &&
+            years.map((year) => (
+              <div class="badge badge-secondary me-2">{year}</div>
+            ))
+        }
+        {
+          tags &&
+            tags.map((tag) => <div class="badge badge-accent me-2">{tag}</div>)
+        }
 
-        </div>
+        <a
+          class="hover:text-secondary text-primary underline text-right grow justify-self-end"
+          href={url}
+          target="_blank">{link_text}</a
+        >
       </div>
     </div>
-  </a>
+  </div>
 </div>

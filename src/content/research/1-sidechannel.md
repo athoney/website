@@ -7,5 +7,6 @@ pubDate: "Spring 2024"
 heroImage: "/SURE-Poster.png"
 url: "/SURE-Poster.png"
 tags: ["Python","Matplotlib", "seaborn", "AES-128"]
+link_text: "View Poster"
 ---
 

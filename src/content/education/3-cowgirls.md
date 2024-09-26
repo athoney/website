@@ -6,5 +6,6 @@ heroImage: "/cowgirls.jpeg"
 url: "https://cowgirlsinstem.webflow.io/"
 badge: "Research"
 years: ["2022", "2023"]
+link_text: "COWGIRLS in STEM"
 ---
 

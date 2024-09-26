@@ -6,4 +6,5 @@ heroImage: "/binary-watch.png"
 badge: "Web Dev"
 url: "https://makecode.microbit.org/S04530-51197-92310-83211"
 tags: ["Block code"]
+link_text: "See the code"
 ---
