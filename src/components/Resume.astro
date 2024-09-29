@@ -52,6 +52,25 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <div class="time-line-container mb-10">
     <TimeLineElement
+        title="Graduate Researcher"
+        subtitle="University of Central Florida / Design of Resilient Architectures for Computing (DRACO) Lab | Aug 2024 - Present"
+    >
+        <span class="text-accent">Research:</span> Exploring advanced topics in
+        computer engineering and software through side channel analysis.
+        Designing and executing experiments, gathering data, and applying
+        statistical analysis to evaluate the performance of system architecture.
+
+        <br />
+        <span class="text-accent">Lab Management:</span> Overseeing the
+        configuration and upkeep of lab systems, including computing resources
+        and network infrastructure, to ensure operational efficiency and
+        security.<br />
+        <span class="text-accent">Mentorship and Collaboration:</span>
+        Supporting undergraduate researchers through mentorship and fostering a
+        collaborative learning environment. Assisting in research methodologies
+        and contributing to the success of ongoing projects.
+    </TimeLineElement>
+    <TimeLineElement
         title="Software Developer"
         subtitle="Wyolution LLC | Dec 2022 - Present"
     >
@@ -179,7 +198,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-2xl w-full font-bold">Awards</div>
 </div>
 
-<ul class="list-disc mx-6 mb-10 grid gap-2">
+<ul
+    role="list"
+    class="list-image-[url(star.svg)] mx-6 mb-10 grid gap-2 marker:text-sky-400"
+>
     <li>
         College of Engineering and Physical Sciences Outstanding Senior - 2024
     </li>
