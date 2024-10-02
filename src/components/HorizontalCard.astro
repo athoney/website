@@ -22,13 +22,20 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
       img && (
         <Image
           src={`/desktop${img}`}
-          srcset={`/mobile${img} 300w, ${img} 600w, /desktop${img} 1200w`}
-          sizes="(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px"
           width={500}
           height={349}
           format="webp"
           alt={title}
-          class="max-w-full md:max-w-[13rem] rounded-lg"
+          class="max-w-full md:max-w-[13rem] rounded-lg hidden md:block"
+          loading={loading}
+        />
+        <Image
+          src={`/mobile${img}`}
+          width={500}
+          height={349}
+          format="webp"
+          alt={title}
+          class="max-w-full md:max-w-[13rem] rounded-lg block md:hidden"
           loading={loading}
         />
       )
